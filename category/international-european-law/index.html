@@ -1,0 +1,20 @@
+---
+layout: default
+title: International & European Law
+---
+
+<div class="home">
+  <ul class="post-list">
+    {% for post in site.posts %}
+    {% if post.categories[0] contains "International" %}
+      <li>
+        <h2 class="post-title">
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <div class="post-content">{{ post.excerpt }}</div>
+        {% include cats.html %}
+      </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
