@@ -9,7 +9,7 @@
           <li><a class="page-link{% if page.url == '/' %} active{% endif %}" href="{{ site.baseurl }}/">Home</a></li>
           <li><a class="page-link{% if page.url == '/about/' %} active{% endif %}" href="{{ site.baseurl }}/about">About Me</a></li>
           <li><a class="page-link{% if page.url == '/resume/' %} active{% endif %}" href="{{ site.baseurl }}/resume">Resume</a></li>
-          <li><a class="page-link{% if page.url == '/vegan-recipes/' %} active{% endif %}" href="{{ site.baseurl }}/vegan-recipes">Vegan Recipes</a></li>
+          <li><a class="page-link{% if page.url == '/vegan-recipes/' %} active{% endif %}" href="{{ site.url }}/{{ site.category_dir }}/vegan-recipes">Vegan Recipes</a></li>
           <li><a class="page-link{% if page.url == '/writings/' %} active{% endif %}" href="{{ site.baseurl }}/writings">Writings</a></li>
       </ul>
     </nav>
