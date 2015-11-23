@@ -4,8 +4,8 @@ layout: default
 
 <div class="home">
   <ul class="post-list">
-    {% for post in site.posts %}vv{{ post.categories }}vv
-    {% unless post.categories[0] contains "Vegan" %}
+    {% for post in site.posts %}
+    {% unless post.categories contains "Vegan" %}
       <li>
         <h2 class="post-title">
           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>

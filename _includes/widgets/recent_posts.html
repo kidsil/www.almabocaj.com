@@ -3,7 +3,7 @@
   <div class="content">
     <ul class="posts">  
       {% for post in site.posts limit:8 %}
-      {% unless post.categories[0] contains "Vegan" %}
+      {% unless post.categories contains "vegan" %}
          <li>
            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
          </li>
