@@ -6,7 +6,7 @@ title: Vegan Recipes
 <div class="home">
   <ul class="post-list">
     {% for post in site.posts %}
-    {% if post.categories contains "vegan" %}
+    {% if post.categories[0] contains "vegan" %}
       <li>
         <h2 class="post-title">
           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
