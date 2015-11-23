@@ -6,7 +6,7 @@ title: International & European Law
 <div class="home">
   <ul class="post-list">
     {% for post in site.posts %}
-    {% if post.categories contains "international" %}
+    {% if post.categories[0] contains "international" %}
       <li>
         <h2 class="post-title">
           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
