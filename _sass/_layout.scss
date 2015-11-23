@@ -21,7 +21,14 @@ body {
     margin: 48px auto;
     box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
     background-color: #fff;
-    max-width: 960px
+    max-width: 960px;
+    &:after {
+        @include clearfix;
+    }
+    @include media-query($on-palm) {
+        padding: 0 10px;
+        margin-top: 0;
+    }
 }
 
 header {
@@ -59,6 +66,10 @@ header {
                 position: relative;
                 display: inline-block;
                 text-decoration: none;
+                @include media-query($on-palm) {
+                    display: block;
+                    text-align: center;
+                }
                 a {
                     color: #636363;
                     line-height: 44px;
@@ -80,14 +91,27 @@ header {
 .left-sidebar, .right-sidebar {
     display: inline-block;
     vertical-align: top;
+    &:after {
+        @include clearfix;
+    }
 }
 .left-sidebar {
     width: 65.1%;
-    margin-right: 81px;
+    @include media-query($on-palm) {
+        width: auto;
+    }
 }
 .right-sidebar {
     width: 26%;
     margin-top: 24px;
+    float: right;
+    @include media-query($on-palm) {
+        display: none;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
     .widget {
         margin-bottom: 48px;
         h3 {
@@ -154,5 +178,16 @@ a:hover {
         &:hover {
             color: #21759b;
         }
+    }
+}
+
+
+// Media
+@include media-query($on-palm) {
+    h1, h2 {
+        text-align: center;
+    }
+    body {
+        background-image: none;
     }
 }
