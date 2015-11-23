@@ -2,10 +2,12 @@
   <h3>Recent Posts</h3>
   <div class="content">
     <ul class="posts">  
-      {% for post in site.posts limit:5 %}
+      {% for post in site.posts limit:8 %}
+      {% unless post.categories[0] contains "Vegan" %}
          <li>
            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
          </li>
+      {% endunless %}
       {% endfor %}  
     </ul>
   </div>
