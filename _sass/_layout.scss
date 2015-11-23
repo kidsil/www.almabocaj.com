@@ -123,6 +123,16 @@ header {
 
 .post-list {
     list-style: none;
+    margin-bottom: 60px;
+    li {
+        border-bottom: 4px double #ededed;
+        margin-bottom: 52px;
+        padding-bottom: 24px;
+        word-wrap: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
 }
 
 a {
@@ -132,4 +142,17 @@ a {
 }
 a:hover {
     color: #0f3647;
+}
+
+.post-meta {
+    margin-top: 24px;
+    font-size: 13px;
+    color: #757575;
+    a {
+        text-decoration: underline;
+        color: #757575;
+        &:hover {
+            color: #21759b;
+        }
+    }
 }

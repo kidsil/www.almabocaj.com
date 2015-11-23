@@ -17,6 +17,10 @@ h1.post-title {
     p {
     	margin: 0 0 24px;
     }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 table.resume {
@@ -29,4 +33,7 @@ table.resume {
     ul {
         padding-left: 30px;
     }
+}
+#page article {
+    margin-bottom: 60px;
 }
