@@ -12,12 +12,14 @@ description: > # this means to ignore newlines until "baseurl:"
   International Law, European Law & Political Sciences
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.almabocaj.com" # the base hostname & protocol for your site
+permalink: "/:year/:month/:title"
 twitter_username: jekyllrb
 github_username:  jekyll
 gems:
   - jekyll-redirect-from
 
 category_dir: "category"
+category_title_prefix: ""
 
 # Build settings
 markdown: kramdown
