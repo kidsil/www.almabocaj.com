@@ -5,16 +5,15 @@ layout: default
 <div class="home">
   <ul class="post-list">
     {% for post in site.posts %}
+    {% unless post.categories[0] contains "Vegan" %}
       <li>
         <h2 class="post-title">
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         <div class="post-content">{{ post.excerpt }}</div>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% include cats.html %}
       </li>
+    {% endunless %}
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
